@@ -130,6 +130,7 @@ export default function Home() {
           <Input
             name="Name"
             bg="sheet"
+            required
             sx={{ border: '0.1px solid', borderColor: 'sunken' }}
           />
         </Box>
@@ -138,6 +139,7 @@ export default function Home() {
           <Input
             bg="sheet"
             name="Email"
+            required
             sx={{ border: '0.1px solid', borderColor: 'sunken' }}
           />
         </Box>
@@ -146,6 +148,7 @@ export default function Home() {
           <Textarea
             bg="sheet"
             name="Members"
+            required
             sx={{ border: '0.1px solid', borderColor: 'sunken' }}
           />
         </Box>
@@ -154,6 +157,7 @@ export default function Home() {
           <Input
             bg="sheet"
             name="Video"
+            required
             sx={{ border: '0.1px solid', borderColor: 'sunken' }}
           />
         </Box>
@@ -162,6 +166,7 @@ export default function Home() {
           <Textarea
             bg="sheet"
             name="Summary"
+            required
             sx={{ border: '0.1px solid', borderColor: 'sunken' }}
           />
         </Box>
