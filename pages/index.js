@@ -6,7 +6,8 @@ import {
   Heading,
   Input,
   Link,
-  Textarea
+  Textarea,
+  Text
 } from 'theme-ui'
 import Meta from '@the-innovation-circuit/meta'
 
@@ -118,12 +119,16 @@ export default function Home() {
       <Container
         id="submit"
         variant="copy"
+        as="form"
+        method="POST"
+        action="https://airtable-forms-proxy.hackclub.dev/api/appfav1jhxXDItkOL/Submissions?redirect=http://localhost:3000/congrats"
         sx={{ fontSize: 2, py: 4, display: 'grid', gap: '16px' }}
       >
         <Heading>Submit Your Idea</Heading>
         <Box>
           <small>Team Name</small>
           <Input
+            name="Name"
             bg="sheet"
             sx={{ border: '0.1px solid', borderColor: 'sunken' }}
           />
@@ -132,6 +137,7 @@ export default function Home() {
           <small>Contact Email</small>
           <Input
             bg="sheet"
+            name="Email"
             sx={{ border: '0.1px solid', borderColor: 'sunken' }}
           />
         </Box>
@@ -139,6 +145,7 @@ export default function Home() {
           <small>List of Team Member Names</small>
           <Textarea
             bg="sheet"
+            name="Members"
             sx={{ border: '0.1px solid', borderColor: 'sunken' }}
           />
         </Box>
@@ -146,6 +153,7 @@ export default function Home() {
           <small>Link to Pitch Video (through YouTube, Vimeo etc.)</small>
           <Input
             bg="sheet"
+            name="Video"
             sx={{ border: '0.1px solid', borderColor: 'sunken' }}
           />
         </Box>
@@ -153,6 +161,7 @@ export default function Home() {
           <small>Brief Summary of Project (will not be judged)</small>
           <Textarea
             bg="sheet"
+            name="Summary"
             sx={{ border: '0.1px solid', borderColor: 'sunken' }}
           />
         </Box>
@@ -171,6 +180,14 @@ export default function Home() {
           variant="copy"
           sx={{ color: 'muted', py: 4, textAlign: 'center', px: 6 }}
         >
+          <Box mb={2}>
+            <Text as="b">
+              Contact us at{' '}
+              <Link href="mailto:contact@innovation-challenge.co" sx={{ opacity: 0.8}}>
+                contact@innovation-challenge.co
+              </Link>
+            </Text>
+          </Box>
           Fiscally sponsored by Hack Club Bank, a project by The Hack Foundation
           (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
         </Container>
