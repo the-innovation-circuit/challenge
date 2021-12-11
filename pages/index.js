@@ -22,7 +22,7 @@ function SquareButton({
 }) {
   return (
     <Button sx={{ borderRadius: '12px', mx, bg, color, ...sx }}>
-      <Heading as={as ? as : 'h2'} sx={{ textDecoration: 'none!important' }}>
+      <Heading as={as ? as : 'h2'} sx={{ textDecoration: 'none!important',  }}>
         {children}
       </Heading>
     </Button>
@@ -53,12 +53,12 @@ export default function Home() {
             py: 6
           }}
         >
-          <Heading sx={{ fontSize: 4, fontWeight: 600 }}>
+          <Heading sx={{ fontSize: [3, 4], fontWeight: 600 }}>
             Pitch your innovative idea & potentially win $1,000 at the
           </Heading>
-          <Heading sx={{ fontSize: 7 }}>Innovation Challenge</Heading>
+          <Heading sx={{ fontSize: [6, 7] }}>Innovation Challenge</Heading>
           <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Link href="#submit" sx={{ textDecoration: 'none!important' }}>
+            <Link href="#submit" sx={{ textDecoration: 'none!important', fontSize: ["0.8em", "1em"] }}>
               <SquareButton>
                 Submit Your Idea <span style={{ fontSize: '0.9em' }}>(</span>
                 closes March 21st<span style={{ fontSize: '0.9em' }}>)</span>
@@ -178,7 +178,7 @@ export default function Home() {
       <Box bg="snow">
         <Container
           variant="copy"
-          sx={{ color: 'muted', py: 4, textAlign: 'center', px: 6 }}
+          sx={{ color: 'muted', py: 4, textAlign: ['left', 'center'], px: [3, 6] }}
         >
           <Box mb={2}>
             <Text as="b">
