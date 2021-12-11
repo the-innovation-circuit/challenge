@@ -121,7 +121,7 @@ export default function Home() {
         variant="copy"
         as="form"
         method="POST"
-        action="https://airtable-forms-proxy.hackclub.dev/api/appfav1jhxXDItkOL/Submissions?redirect=http://localhost:3000/congrats"
+        action="https://airtable-forms-proxy.hackclub.dev/api/appfav1jhxXDItkOL/Submissions?redirect=https://innovation-challenge.co/congrats"
         sx={{ fontSize: 2, py: 4, display: 'grid', gap: '16px' }}
       >
         <Heading>Submit Your Idea</Heading>
