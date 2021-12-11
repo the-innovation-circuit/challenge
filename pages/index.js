@@ -28,13 +28,12 @@ function SquareButton({
   )
 }
 
+const description = `Calling all students aged 12 to 18 in APAC! The Innovation Challenge is your chance to tackle the critical issues that your community faces. As an individual or as a team (5 people at most) you'll identify a issue, create an idea to solve that issue and then pitch your idea. The best pitch will win a SGD 1,000 cash prize to help kickstart the team's idea.`
+
 export default function Home() {
   return (
     <Box>
-      <Meta
-        title="The Innovation Challenge"
-        description={`Calling all students aged 12 to 18 in APAC! The Innovation Challenge is your chance to tackle the critical issues that your community faces. As an individual or as a team (5 people at most) you'll identify a issue, create an idea to solve that issue and then pitch your idea. The best pitch will win a price of SGD 1,000 to help kickstart the team's idea.`}
-      />
+      <Meta title="The Innovation Challenge" description={description} />
       <Box
         sx={{
           backgroundImage:
@@ -68,11 +67,7 @@ export default function Home() {
         </Container>
       </Box>
       <Container variant="copy" sx={{ fontSize: 2, py: 4 }}>
-        Calling all students aged 12 to 18 in APAC! The Innovation Challenge is
-        your chance to tackle the critical issues that your community faces. As
-        an individual or as a team (5 people at most) you'll identify a issue,
-        create an idea to solve that issue and then pitch your idea. The best
-        pitch will win a price of SGD 1,000 to help kickstart the team's idea.
+        {description}
       </Container>
       <Box sx={{ bg: 'primary', py: 4 }}>
         <Container variant="copy" sx={{ display: 'grid', gap: '16px' }}>
@@ -87,7 +82,7 @@ export default function Home() {
           </Card>
           <Card sx={{ p: [3, 3, 3] }}>
             <Heading as="h4" sx={{ mb: 1 }}>
-              Stage 2: The Qualifying Round
+              Stage 2: The Qualifying Round (up until 21 March)
             </Heading>
             In this stage, all teams who wish to participate will submit a video
             (max. 5 minutes) with their pitch as a video in the form below by
@@ -95,13 +90,14 @@ export default function Home() {
           </Card>
           <Card sx={{ p: [3, 3, 3] }}>
             <Heading as="h4" sx={{ mb: 1 }}>
-              Stage 3: The Finals
+              Stage 3: The Finals (late April)
             </Heading>
             The top five teams from the Qualifying Round will be invited to take
             place in the finals. In the finals they'll deliver a 5-10 minute
             pitch live in front of a panel of judges and then answer questions
             for another 5 minutes. The winning team will subsequently be
-            selected.
+            selected. The finals will take place on a weekend in late April,
+            exact dates TBC.
           </Card>
           <Card
             sx={{
@@ -112,7 +108,7 @@ export default function Home() {
             }}
             variant="interactive"
             as="a"
-            href="http://innovationcircuit.com"
+            href="https://docs.google.com/document/d/1XHwdeZ_WaeGHft7E1FETgkWHjWU2FEYA9IuivaiaP_w/edit?usp=sharing"
             target="_blank"
           >
             Learn More →
