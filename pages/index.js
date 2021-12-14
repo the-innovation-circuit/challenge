@@ -7,6 +7,8 @@ import {
   Input,
   Link,
   Textarea,
+  Image,
+  Flex,
   Text
 } from 'theme-ui'
 import Meta from '@the-innovation-circuit/meta'
@@ -22,7 +24,7 @@ function SquareButton({
 }) {
   return (
     <Button sx={{ borderRadius: '12px', mx, bg, color, ...sx }}>
-      <Heading as={as ? as : 'h2'} sx={{ textDecoration: 'none!important',  }}>
+      <Heading as={as ? as : 'h2'} sx={{ textDecoration: 'none!important' }}>
         {children}
       </Heading>
     </Button>
@@ -58,7 +60,13 @@ export default function Home() {
           </Heading>
           <Heading sx={{ fontSize: [6, 7] }}>Innovation Challenge</Heading>
           <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Link href="#submit" sx={{ textDecoration: 'none!important', fontSize: ["0.8em", "1em"] }}>
+            <Link
+              href="#submit"
+              sx={{
+                textDecoration: 'none!important',
+                fontSize: ['0.8em', '1em']
+              }}
+            >
               <SquareButton>
                 Submit Your Idea <span style={{ fontSize: '0.9em' }}>(</span>
                 closes March 21st<span style={{ fontSize: '0.9em' }}>)</span>
@@ -180,15 +188,38 @@ export default function Home() {
           Submit Your Idea 🚀
         </SquareButton>
       </Container>
+      <Box sx={{ bg: 'primary', py: 4, pb: 4, color: 'white', textAlign: 'center' }}>
+        <Container variant="copy">
+          <Heading>Thank You To Our Community Partners</Heading>
+          <Flex mt={3} sx={{flexWrap: 'wrap', justifyContent: 'center'}}>
+            <Image
+              src="https://www.ibo.org/Assets/Images/logo-163.svg"
+              sx={{ background: 'white', p: 2, borderRadius: 8, height: '60px', mx: 1, mb: 2 }}
+            />
+            <Image
+              src="https://bank.hackclub.com/brand/hcb-logo-outlined-black.png"
+              sx={{ background: 'white', p: 2, borderRadius: 8, height: '60px', mx: 1, mb: 2 }}
+            />
+          </Flex>
+        </Container>
+      </Box>
       <Box bg="snow">
         <Container
           variant="copy"
-          sx={{ color: 'muted', py: 4, textAlign: ['left', 'center'], px: [3, 6] }}
+          sx={{
+            color: 'muted',
+            py: 4,
+            textAlign: ['left', 'center'],
+            px: [3, 6]
+          }}
         >
           <Box mb={2}>
             <Text as="b">
               Contact us at{' '}
-              <Link href="mailto:contact@innovation-challenge.co" sx={{ opacity: 0.8}}>
+              <Link
+                href="mailto:contact@innovation-challenge.co"
+                sx={{ opacity: 0.8 }}
+              >
                 contact@innovation-challenge.co
               </Link>
             </Text>
