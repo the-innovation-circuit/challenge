@@ -108,20 +108,39 @@ export default function Home() {
             selected. The finals will take place on a weekend in late April,
             exact dates TBC.
           </Card>
-          <Card
-            sx={{
-              p: [3, 3, 3],
-              py: [2, 2, 2],
-              width: 'fit-content',
-              fontWeight: 700
-            }}
-            variant="interactive"
-            as="a"
-            href="https://docs.google.com/document/d/1XHwdeZ_WaeGHft7E1FETgkWHjWU2FEYA9IuivaiaP_w/edit?usp=sharing"
-            target="_blank"
-          >
-            Learn More →
-          </Card>
+          <Box sx={{display: 'flex', flexWrap: 'wrap'}}>
+            <Card
+              sx={{
+                p: [3, 3, 3],
+                py: [2, 2, 2],
+                mr: 2,
+                mb: 2,
+                width: 'fit-content',
+                fontWeight: 700
+              }}
+              variant="interactive"
+              as="a"
+              href="https://docs.google.com/document/d/1XHwdeZ_WaeGHft7E1FETgkWHjWU2FEYA9IuivaiaP_w/edit?usp=sharing"
+              target="_blank"
+            >
+              Learn More →
+            </Card>
+            <Card
+              sx={{
+                p: [3, 3, 3],
+                py: [2, 2, 2],
+                width: 'fit-content',
+                mb: 2,
+                fontWeight: 700
+              }}
+              variant="interactive"
+              as="a"
+              href="https://discord.com/invite/6B7PF6EuV3"
+              target="_blank"
+            >
+              Join Our Discord →
+            </Card>
+          </Box>
         </Container>
       </Box>
       <Container
