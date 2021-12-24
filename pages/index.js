@@ -80,6 +80,9 @@ export default function Home() {
       </Container>
       <Box sx={{ bg: 'primary', py: 4 }}>
         <Container variant="copy" sx={{ display: 'grid', gap: '16px' }}>
+          <Heading as="h1" sx={{ color: 'white' }}>
+            The Process
+          </Heading>
           <Card sx={{ p: [3, 3, 3] }}>
             <Heading as="h4" sx={{ mb: 1 }}>
               Stage 1: Project Formulation
@@ -108,7 +111,7 @@ export default function Home() {
             selected. The finals will take place on a weekend in late April,
             exact dates TBC.
           </Card>
-          <Box sx={{display: 'flex', flexWrap: 'wrap'}}>
+          <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
             <Card
               sx={{
                 p: [3, 3, 3],
@@ -143,82 +146,188 @@ export default function Home() {
           </Box>
         </Container>
       </Box>
-      <Container
-        id="submit"
-        variant="copy"
-        as="form"
-        method="POST"
-        action="https://airtable-forms-proxy.hackclub.dev/api/appfav1jhxXDItkOL/Submissions?redirect=https://innovation-challenge.co/congrats"
-        sx={{ fontSize: 2, py: 4, display: 'grid', gap: '16px' }}
-      >
-        <Heading>Submit Your Idea</Heading>
-        <Box>
-          <small>Team Name</small>
-          <Input
-            name="Name"
-            bg="sheet"
-            required
-            sx={{ border: '0.1px solid', borderColor: 'sunken' }}
-          />
-        </Box>
-        <Box>
-          <small>Contact Email</small>
-          <Input
-            bg="sheet"
-            name="Email"
-            required
-            sx={{ border: '0.1px solid', borderColor: 'sunken' }}
-          />
-        </Box>
-        <Box>
-          <small>List of Team Member Names</small>
-          <Textarea
-            bg="sheet"
-            name="Members"
-            required
-            sx={{ border: '0.1px solid', borderColor: 'sunken' }}
-          />
-        </Box>
-        <Box>
-          <small>Link to Pitch Video (through YouTube, Vimeo etc.)</small>
-          <Input
-            bg="sheet"
-            name="Video"
-            required
-            sx={{ border: '0.1px solid', borderColor: 'sunken' }}
-          />
-        </Box>
-        <Box>
-          <small>Brief Summary of Project (will not be judged)</small>
-          <Textarea
-            bg="sheet"
-            name="Summary"
-            required
-            sx={{ border: '0.1px solid', borderColor: 'sunken' }}
-          />
-        </Box>
-        <SquareButton
-          bg="primary"
-          color="white"
-          as="h5"
-          mx={0}
-          sx={{ justifyContent: 'left', py: '12px', width: 'fit-content' }}
+      <Box sx={{ py: 4 }}>
+        <Container variant="copy" sx={{ display: 'grid', gap: '16px' }}>
+          <Heading as="h1">The Prizes</Heading>
+          <Card
+            sx={{
+              p: [3, 3, 3],
+              bg: 'sheet',
+              boxShadow: 'none',
+              border: '0.1px solid',
+              borderColor: 'sunken'
+            }}
+          >
+            <Heading as="h4" sx={{ mb: 1 }}>
+              The Grand Prize: $1,000
+            </Heading>
+            The Grand Prize is judged on innovation, impact, presentation and
+            feasibility. This prize, alongside the others below, will be
+            presented after the finals.
+          </Card>
+          <Card
+            sx={{
+              p: [3, 3, 3],
+              bg: 'sheet',
+              boxShadow: 'none',
+              border: '0.1px solid',
+              borderColor: 'sunken'
+            }}
+          >
+            <Heading as="h4" sx={{ mb: 1 }}>
+              The Ezsy Prize: $250
+            </Heading>
+            Inspired by our sponsor <Link href="https://ezsy.com/" target="_blank">Ezsy</Link>,
+            this prize will go to the team / individual whose idea is the best
+            at making people’s lives <i>ezsy-ier</i>.
+          </Card>
+          <Card
+            sx={{
+              p: [3, 3, 3],
+              bg: 'sheet',
+              boxShadow: 'none',
+              border: '0.1px solid',
+              borderColor: 'sunken'
+            }}
+          >
+            <Heading as="h4" sx={{ mb: 1 }}>
+              The Best Presented Prize (sponsored by the ASEAN Fintech Group):
+              $250
+            </Heading>
+            This prize will go to the team / individual who displays the best
+            presentation skills in their pitch at the finals. This prize has
+            been sponsored by{' '}
+            <Link href="https://www.aseanfintechgroup.com" target="_blank">
+              the ASEAN Fintech Group
+            </Link>
+            .
+          </Card>
+        </Container>
+      </Box>
+      <Box bg="primary">
+        <Container
+          id="submit"
+          variant="copy"
+          as="form"
+          method="POST"
+          action="https://airtable-forms-proxy.hackclub.dev/api/appfav1jhxXDItkOL/Submissions?redirect=https://innovation-challenge.co/congrats"
+          sx={{
+            fontSize: 2,
+            py: 4,
+            display: 'grid',
+            gap: '16px',
+            color: 'white'
+          }}
         >
-          Submit Your Idea 🚀
-        </SquareButton>
-      </Container>
-      <Box sx={{ bg: 'primary', py: 4, pb: 4, color: 'white', textAlign: 'center' }}>
+          <Heading>Submit Your Idea</Heading>
+          <Box sx={{}}>
+            <small>Team Name</small>
+            <Input
+              name="Name"
+              bg="sheet"
+              required
+              sx={{ border: '0.1px solid', borderColor: 'sunken',boxShadow: 'card' }}
+            />
+          </Box>
+          <Box>
+            <small>Contact Email</small>
+            <Input
+              bg="sheet"
+              name="Email"
+              required
+              sx={{ border: '0.1px solid', borderColor: 'sunken',boxShadow: 'card' }}
+            />
+          </Box>
+          <Box>
+            <small>List of Team Member Names</small>
+            <Textarea
+              bg="sheet"
+              name="Members"
+              required
+              sx={{ border: '0.1px solid', borderColor: 'sunken',boxShadow: 'card' }}
+            />
+          </Box>
+          <Box>
+            <small>Link to Pitch Video (through YouTube, Vimeo etc.)</small>
+            <Input
+              bg="sheet"
+              name="Video"
+              required
+              sx={{ border: '0.1px solid', borderColor: 'sunken',boxShadow: 'card' }}
+            />
+          </Box>
+          <Box>
+            <small>Brief Summary of Project (will not be judged)</small>
+            <Textarea
+              bg="sheet"
+              name="Summary"
+              required
+              sx={{ border: '0.1px solid', borderColor: 'sunken',boxShadow: 'card' }}
+            />
+          </Box>
+          <SquareButton
+            as="h5"
+            mx={0}
+            sx={{ justifyContent: 'left', py: '12px', width: 'fit-content' }}
+          >
+            Submit Your Idea 🚀
+          </SquareButton>
+        </Container>
+      </Box>
+      <Box
+        sx={{
+          py: 4,
+          pb: 4,
+          textAlign: 'center'
+        }}
+      >
         <Container variant="copy">
-          <Heading>Thank You To Our Community Partners</Heading>
-          <Flex mt={3} sx={{flexWrap: 'wrap', justifyContent: 'center'}}>
+          <Heading>Thank You To Our Sponsors & Partners</Heading>
+          <Flex mt={3} sx={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+            <Link href="https://www.aseanfintechgroup.com" target="_blank">
+              <Image
+                src="https://static.wixstatic.com/media/998f29_3d263ce2f09b410abef0a41c501247e5~mv2.png/v1/fill/w_356,h_96,al_c,usm_0.66_1.00_0.01/ASEAN%20FINTECH%20GRP%20LOGO.png"
+                sx={{
+                  background: 'white',
+                  borderRadius: 8,
+                  height: '80px',
+                  mx: 1,
+                  mb: 2,
+                  border: '0.1px solid',
+                  borderColor: 'sunken',
+                  p: 3
+                }}
+              />
+            </Link>
+            <Link href="https://ezsy.com/" target="_blank">
+              <Image
+                src="https://ezsy.com/wp-content/uploads/2020/12/cropped-Ezsy-Final-01.png"
+                sx={{
+                  background: 'white',
+                  borderRadius: 8,
+                  height: '80px',
+                  mx: 1,
+                  mb: 2,
+                  border: '0.1px solid',
+                  borderColor: 'sunken'
+                }}
+              />
+            </Link>
+            <Link href="https://www.ibo.org" target="_blank">
             <Image
               src="https://www.ibo.org/Assets/Images/logo-163.svg"
-              sx={{ background: 'white', p: 2, borderRadius: 8, height: '60px', mx: 1, mb: 2 }}
+              sx={{
+                background: 'white',
+                p: 3,
+                borderRadius: 8,
+                height: '80px',
+                mx: 1,
+                mb: 2,
+                border: '0.1px solid',
+                borderColor: 'sunken'
+              }}
             />
-            <Image
-              src="https://bank.hackclub.com/brand/hcb-logo-outlined-black.png"
-              sx={{ background: 'white', p: 2, borderRadius: 8, height: '60px', mx: 1, mb: 2 }}
-            />
+            </Link>
           </Flex>
         </Container>
       </Box>
