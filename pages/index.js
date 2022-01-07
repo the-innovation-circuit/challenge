@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <Box>
       <Meta title="The Innovation Challenge" description={description} />
-      <Script data-website-id="a1f88f64-44d5-4e26-8472-248fc8a8c7c9" src="https://onepwaa-analytics.vercel.app/umami.js" />
+      <Script data-website-id="a1f88f64-44d5-4e26-8472-248fc8a8c7c9" src="https://analytics.sampoder.com/umami.js" />
       <Box
         sx={{
           backgroundImage:
