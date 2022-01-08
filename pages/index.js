@@ -37,7 +37,7 @@ const description = `Calling all students aged 12 to 18 in APAC! The Innovation 
 export default function Home() {
   return (
     <Box>
-      <Meta title="The Innovation Challenge" description={description} />
+      <Meta title="The Innovation Challenge" description={description} image="https://cloud-ck3svo7u2-hack-club-bot.vercel.app/0untitled_design-24.png" />
       <Script data-website-id="a1f88f64-44d5-4e26-8472-248fc8a8c7c9" src="https://analytics.sampoder.com/umami.js" />
       <Box
         sx={{
