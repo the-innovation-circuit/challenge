@@ -100,7 +100,7 @@ export default function Home() {
             </Heading>
             In this stage, all teams who wish to participate will submit a video
             (max. 5 minutes) with their pitch as a video in the form below by
-            March 21st. Here's an example of a video.
+            March 21st.
           </Card>
           <Card sx={{ p: [3, 3, 3] }}>
             <Heading as="h4" sx={{ mb: 1 }}>
