@@ -212,7 +212,7 @@ export default function Home() {
           variant="copy"
           as="form"
           method="POST"
-          action="https://airtable-forms-proxy.hackclub.dev/api/appfav1jhxXDItkOL/Submissions?redirect=https://innovation-challenge.co/congrats"
+          action="https://airtable-forms-proxy.hackclub.dev/api/appfav1jhxXDItkOL/Registrations?redirect=https://innovation-challenge.co/welcome"
           sx={{
             fontSize: 2,
             py: 4,
@@ -221,9 +221,18 @@ export default function Home() {
             color: 'white'
           }}
         >
-          <Heading>Submit Your Idea</Heading>
+          <Heading>Join The Challenge</Heading>
           <Box sx={{}}>
             <small>Team Name</small>
+            <Input
+              name="Team Name"
+              bg="sheet"
+              required
+              sx={{ border: '0.1px solid', borderColor: 'sunken',boxShadow: 'card' }}
+            />
+          </Box>
+          <Box sx={{}}>
+            <small>Your Name</small>
             <Input
               name="Name"
               bg="sheet"
@@ -232,37 +241,10 @@ export default function Home() {
             />
           </Box>
           <Box>
-            <small>Contact Email</small>
+            <small>Contact Email (we'll send all the details here)</small>
             <Input
               bg="sheet"
               name="Email"
-              required
-              sx={{ border: '0.1px solid', borderColor: 'sunken',boxShadow: 'card' }}
-            />
-          </Box>
-          <Box>
-            <small>List of Team Member Names</small>
-            <Textarea
-              bg="sheet"
-              name="Members"
-              required
-              sx={{ border: '0.1px solid', borderColor: 'sunken',boxShadow: 'card' }}
-            />
-          </Box>
-          <Box>
-            <small>Link to Pitch Video (through YouTube, Vimeo etc.)</small>
-            <Input
-              bg="sheet"
-              name="Video"
-              required
-              sx={{ border: '0.1px solid', borderColor: 'sunken',boxShadow: 'card' }}
-            />
-          </Box>
-          <Box>
-            <small>Brief Summary of Project (will not be judged)</small>
-            <Textarea
-              bg="sheet"
-              name="Summary"
               required
               sx={{ border: '0.1px solid', borderColor: 'sunken',boxShadow: 'card' }}
             />
@@ -272,7 +254,7 @@ export default function Home() {
             mx={0}
             sx={{ justifyContent: 'left', py: '12px', width: 'fit-content' }}
           >
-            Submit Your Idea 🚀
+            Join 🚀
           </SquareButton>
         </Container>
       </Box>

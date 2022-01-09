@@ -54,9 +54,9 @@ export default function Home() {
         >
           <Box>
 
-            <Heading sx={{ fontSize: 6 }}>Congrats on submitting!</Heading>
+            <Heading sx={{ fontSize: 6 }}>Welcome to the Innovation Challenge</Heading>
             <Heading sx={{ fontSize: 3, fontWeight: 600, mt: 2 }}>
-              Results will be released on the 25th of March through email.
+              We've sent all the details to your email.
             </Heading>
           </Box>
         </Container>
