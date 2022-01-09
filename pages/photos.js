@@ -5,13 +5,11 @@ import Link from "next/link"
 
 function Image({ src, ...props }) {
   return (
-    <a href={src}>
-      <Image
-        width={200}
-        height={200}
+      <NextImage
         src={src}
+        {...props}
+        onClick={()=> window.location.href = src}
       />
-    </a>
   )
 }
 
@@ -57,58 +55,50 @@ export default function Home() {
             content="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/2screenshot_2021-04-05_at_7.23.57_pm.png"
           />
         </Head>
-        <Heading sx={{ mt: 3, px: '0px', fontSize: '1.75rem' }}>Photos of the Innovation Circuit</Heading>
+        <Heading as='h1' sx={{ mt: 4, px: '0px', fontSize: '2rem' }}>Innovation Challenge Photos</Heading>
         <Text as="p" sx={{  mt: "8px", mb: '8px' }}>
-          It's hard for us to put the vibe of an Innovation Circuit event in
-          words, so here are some photos from Innovation Week (the predecessor
-          to the Innovation Circuit) that capture the atmosphere of an
-          Innovation Circuit event best:
+          Click on any photo for the full file.
         </Text>
-        <Grid gap={2} columns={[2, 3, 3]} sx={{ marginBottom: "18px" }}>
+        <Grid gap={3} columns={[2, 3, 3]} sx={{ marginBottom: "18px" }}>
           <Image
             width={200}
-            height={200}
+            height={300}
             src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/0gems_innovation_week-2763-min.jpg"
           />
           <Image
             width={200}
-            height={200}
+            height={300}
             src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/1gems_innovation_week-2831-min.jpg"
           />
           <Image
             width={200}
-            height={150}
+            height={300}
             src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/2gems_innovation_week-2754-min.jpg"
           />
           <Image
             width={200}
-            height={200}
+            height={300}
             src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/0screenshot_2021-04-05_at_7.25.05_pm.png"
           />
           <Image
             width={200}
-            height={150}
+            height={300}
             src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/1screenshot_2021-04-05_at_7.24.29_pm.png"
           />
           <Image
             width={200}
-            height={200}
+            height={300}
             src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/2screenshot_2021-04-05_at_7.23.57_pm.png"
           />
           <Image
             width={200}
-            height={200}
+            height={300}
             src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/3screenshot_2021-04-05_at_7.23.42_pm.png"
           />
           <Image
             width={200}
-            height={200}
+            height={300}
             src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/4screenshot_2021-04-05_at_7.23.14_pm.png"
-          />
-          <Image
-            width={200}
-            height={200}
-            src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/5screenshot_2021-04-05_at_7.22.11_pm.png"
           />
         </Grid>
         <style>{`img{object-fit: cover;}`}</style>
