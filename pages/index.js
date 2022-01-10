@@ -70,7 +70,7 @@ export default function Home() {
               }}
             >
               <SquareButton>
-                Join the Challenge
+                Join the Challenge (closes 21st March)
               </SquareButton>
             </Link>
           </Box>
