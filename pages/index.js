@@ -70,8 +70,7 @@ export default function Home() {
               }}
             >
               <SquareButton>
-                Submit Your Idea <span style={{ fontSize: '0.9em' }}>(</span>
-                closes March 21st<span style={{ fontSize: '0.9em' }}>)</span>
+                Join the Challenge
               </SquareButton>
             </Link>
           </Box>
