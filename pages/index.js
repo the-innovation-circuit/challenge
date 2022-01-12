@@ -211,7 +211,7 @@ export default function Home() {
           variant="copy"
           as="form"
           method="POST"
-          action="https://airtable-forms-proxy.hackclub.dev/api/appfav1jhxXDItkOL/Registrations?redirect=https://innovation-challenge.co/welcome"
+          action="http://airtable-forms-proxy.innovationcircuit.co/api/appfav1jhxXDItkOL/Registrations?redirect=https://innovation-challenge.co/welcome"
           sx={{
             fontSize: 2,
             py: 4,
