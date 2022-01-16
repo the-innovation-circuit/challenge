@@ -6,5 +6,14 @@ module.exports = withMDX({
       'cloud-okol6b1vm-hack-club-bot.vercel.app',
       'cloud-qmweg7d8y-hack-club-bot.vercel.app'
     ]
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/:slug*',
+        destination: 'http://posters.innovation-challenge.co/:slug*', // Matched parameters can be used in the destination
+        permanent: true,
+      },
+    ]
+  },
 })
