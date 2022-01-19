@@ -452,7 +452,7 @@ export default function Home() {
               </Link>
             </Text>
           </Box>
-          Fiscally sponsored by Hack Club Bank, a project by The Hack Foundation
+          Fiscally sponsored by the Hack Foundation
           (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
         </Container>
       </Box>
