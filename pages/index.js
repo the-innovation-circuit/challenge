@@ -84,15 +84,14 @@ export default function Home() {
         title="The Innovation Challenge"
         description={description}
         image="https://cloud-ck3svo7u2-hack-club-bot.vercel.app/0untitled_design-24.png"
-      />
+      >
+        <script src="https://embed.small.chat/TKM55CBL5C02UQJDS0MA.js" />
+      </Meta>
       <Script
         data-website-id="a1f88f64-44d5-4e26-8472-248fc8a8c7c9"
         src="https://analytics.sampoder.com/umami.js"
       />
-      <Script
-        
-        src="https://embed.small.chat/TKM55CBL5C02UQJDS0MA.js"
-      />
+
       <Box
         sx={{
           backgroundImage:
