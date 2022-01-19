@@ -282,7 +282,7 @@ export default function Home() {
       <Box sx={{ py: 4 }}>
         <Container variant="copy">
           <Heading as="h1">Who Is Behind The Challenge?</Heading>
-          <Grid sx={{ columns: 3, gap: 4, mt: 3 }} columns={3}>
+          <Grid sx={{ columns: [1, 3], gap: 4, mt: 3 }} columns={[2,3]}>
             <Avatar
               name="Arsh Shrivastava"
               image="/arsh.png"
@@ -337,21 +337,6 @@ export default function Home() {
             <Link href="https://www.ibo.org" target="_blank">
               <Image
                 src="https://www.ibo.org/Assets/Images/logo-163.svg"
-                sx={{
-                  background: 'white',
-                  p: 3,
-                  borderRadius: 8,
-                  height: '80px',
-                  mx: 1,
-                  mb: 2,
-                  border: '0.1px solid',
-                  borderColor: 'sunken'
-                }}
-              />
-            </Link>
-            <Link href="https://hackclub.com" target="_blank">
-              <Image
-                src="https://assets.hackclub.com/flag-standalone.png"
                 sx={{
                   background: 'white',
                   p: 3,
