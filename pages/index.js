@@ -332,6 +332,8 @@ export default function Home() {
             <Avatar name="Edwin Cheah" image="/edwin.png" role="Organiser" />
             <Avatar name="Neil Ghosh" image="/neil.png" role="Organiser" />
             <Avatar name="Sam Poder" image="/sam.png" role="Organiser" />
+            <Avatar name="Belinda Lim" image="https://media-exp1.licdn.com/dms/image/C5103AQGAU-uuptxtAA/profile-displayphoto-shrink_400_400/0/1552823390305?e=1648080000&v=beta&t=HMrzYidxJtAVFPBz5dvejEoqt1bxidYj-dmfiYgrcSk" role="Judge ~ Avarta" />
+            <Avatar name="Lysan Chew" image="https://media-exp1.licdn.com/dms/image/C5603AQGYrjAIrtLo4g/profile-displayphoto-shrink_400_400/0/1601476899531?e=1648080000&v=beta&t=MJyAu9GyqMwlP5EkD2rzOhvsZ7gm2ElwFCvowmFkZKM" role="Judge ~ Amorepacific" />
           </Grid>
           <Heading mt={4} as="h3">
             With the kind support of our sponsors & partners...
