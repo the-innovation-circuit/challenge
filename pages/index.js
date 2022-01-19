@@ -149,7 +149,7 @@ export default function Home() {
           </Card>
           <Card sx={{ p: [3, 3, 3] }}>
             <Heading as="h4" sx={{ mb: 1 }}>
-              Stage 2: The Qualifying Round (up until 21 March)
+              Stage 2: The Qualifying Round (up until 31st March)
             </Heading>
             In this stage, all teams who wish to participate will submit a video
             (max. 5 minutes) with their pitch as a video in the form below by
@@ -157,14 +157,14 @@ export default function Home() {
           </Card>
           <Card sx={{ p: [3, 3, 3] }}>
             <Heading as="h4" sx={{ mb: 1 }}>
-              Stage 3: The Finals (late April)
+              Stage 3: The Finals (April 30th)
             </Heading>
             The top five teams from the Qualifying Round will be invited to take
-            place in the finals. In the finals they'll deliver a 5-10 minute
-            pitch live in front of a panel of judges and then answer questions
-            for another 5 minutes. The winning team will subsequently be
-            selected. The finals will take place on a weekend in late April,
-            exact dates TBC.
+            place in the finals by April 4th. In the finals they'll deliver a
+            5-10 minute pitch live in front of a panel of judges and then answer
+            questions for another 5 minutes. The winning team will subsequently
+            be selected. The finals will take place on Saturday April 30th, finalists
+            will receive all the details.
           </Card>
           <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
             <Card
@@ -203,17 +203,49 @@ export default function Home() {
       </Box>
       <Box sx={{ py: 4 }}>
         <Marquee velocity={25}>
-          <GalleryImage ml={4} mr={0} src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/0gems_innovation_week-2763-min.jpg" />
-          <GalleryImage ml={4} mr={0}  src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/1gems_innovation_week-2831-min.jpg" />
-          <GalleryImage ml={4} mr={0}  src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/2gems_innovation_week-2754-min.jpg" />
-          <GalleryImage ml={4} mr={0}  src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/0screenshot_2021-04-05_at_7.25.05_pm.png" />
+          <GalleryImage
+            ml={4}
+            mr={0}
+            src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/0gems_innovation_week-2763-min.jpg"
+          />
+          <GalleryImage
+            ml={4}
+            mr={0}
+            src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/1gems_innovation_week-2831-min.jpg"
+          />
+          <GalleryImage
+            ml={4}
+            mr={0}
+            src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/2gems_innovation_week-2754-min.jpg"
+          />
+          <GalleryImage
+            ml={4}
+            mr={0}
+            src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/0screenshot_2021-04-05_at_7.25.05_pm.png"
+          />
         </Marquee>
         <br />
         <Marquee velocity={25}>
-          <GalleryImage mr={4} ml={0}  src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/1screenshot_2021-04-05_at_7.24.29_pm.png" />
-          <GalleryImage mr={4} ml={0}  src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/2screenshot_2021-04-05_at_7.23.57_pm.png" />
-          <GalleryImage mr={4} ml={0}  src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/3screenshot_2021-04-05_at_7.23.42_pm.png" />
-          <GalleryImage mr={4} ml={0}  src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/4screenshot_2021-04-05_at_7.23.14_pm.png" />
+          <GalleryImage
+            mr={4}
+            ml={0}
+            src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/1screenshot_2021-04-05_at_7.24.29_pm.png"
+          />
+          <GalleryImage
+            mr={4}
+            ml={0}
+            src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/2screenshot_2021-04-05_at_7.23.57_pm.png"
+          />
+          <GalleryImage
+            mr={4}
+            ml={0}
+            src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/3screenshot_2021-04-05_at_7.23.42_pm.png"
+          />
+          <GalleryImage
+            mr={4}
+            ml={0}
+            src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/4screenshot_2021-04-05_at_7.23.14_pm.png"
+          />
         </Marquee>
       </Box>
       <Box bg="primary" sx={{ py: 4 }}>
@@ -282,7 +314,7 @@ export default function Home() {
       <Box sx={{ py: 4 }}>
         <Container variant="copy">
           <Heading as="h1">Who Is Behind The Challenge?</Heading>
-          <Grid sx={{ columns: [1, 3], gap: 4, mt: 3 }} columns={[2,3]}>
+          <Grid sx={{ columns: [1, 3], gap: 4, mt: 3 }} columns={[2, 3]}>
             <Avatar
               name="Arsh Shrivastava"
               image="/arsh.png"
@@ -437,8 +469,8 @@ export default function Home() {
               </Link>
             </Text>
           </Box>
-          Fiscally sponsored by the Hack Foundation
-          (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
+          Fiscally sponsored by the Hack Foundation (d.b.a. Hack Club), a
+          501(c)(3) nonprofit (EIN: 81-2908499).
         </Container>
       </Box>
     </Box>
