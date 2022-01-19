@@ -35,7 +35,7 @@ function SquareButton({
   )
 }
 
-function GalleryImage({ src }) {
+function GalleryImage({ src, ml, mr }) {
   return (
     <Image
       width={370}
@@ -46,7 +46,8 @@ function GalleryImage({ src }) {
         height: '200px',
         objectFit: 'cover',
         objectPosition: 'center',
-        mx: 3,
+        ml,
+        mr,
         borderRadius: '12px'
       }}
     />
@@ -202,17 +203,17 @@ export default function Home() {
       </Box>
       <Box sx={{ py: 4 }}>
         <Marquee velocity={25}>
-          <GalleryImage src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/0gems_innovation_week-2763-min.jpg" />
-          <GalleryImage src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/1gems_innovation_week-2831-min.jpg" />
-          <GalleryImage src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/2gems_innovation_week-2754-min.jpg" />
-          <GalleryImage src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/0screenshot_2021-04-05_at_7.25.05_pm.png" />
+          <GalleryImage ml={4} mr={0} src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/0gems_innovation_week-2763-min.jpg" />
+          <GalleryImage ml={4} mr={0}  src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/1gems_innovation_week-2831-min.jpg" />
+          <GalleryImage ml={4} mr={0}  src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/2gems_innovation_week-2754-min.jpg" />
+          <GalleryImage ml={4} mr={0}  src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/0screenshot_2021-04-05_at_7.25.05_pm.png" />
         </Marquee>
         <br />
         <Marquee velocity={25}>
-          <GalleryImage src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/1screenshot_2021-04-05_at_7.24.29_pm.png" />
-          <GalleryImage src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/2screenshot_2021-04-05_at_7.23.57_pm.png" />
-          <GalleryImage src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/3screenshot_2021-04-05_at_7.23.42_pm.png" />
-          <GalleryImage src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/4screenshot_2021-04-05_at_7.23.14_pm.png" />
+          <GalleryImage mr={4} ml={0}  src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/1screenshot_2021-04-05_at_7.24.29_pm.png" />
+          <GalleryImage mr={4} ml={0}  src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/2screenshot_2021-04-05_at_7.23.57_pm.png" />
+          <GalleryImage mr={4} ml={0}  src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/3screenshot_2021-04-05_at_7.23.42_pm.png" />
+          <GalleryImage mr={4} ml={0}  src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/4screenshot_2021-04-05_at_7.23.14_pm.png" />
         </Marquee>
       </Box>
       <Box bg="primary" sx={{ py: 4 }}>
