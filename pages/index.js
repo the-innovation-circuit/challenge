@@ -298,8 +298,8 @@ export default function Home() {
             }}
           >
             <Heading as="h4" sx={{ mb: 1 }}>
-              The Best Presented Prize (sponsored by the ASEAN Fintech Group):
-              $250
+              The Best Presented Prize:
+              $250 (sponsored by the ASEAN Fintech Group)
             </Heading>
             This prize will go to the team / individual who displays the best
             presentation skills in their pitch at the finals. This prize has
