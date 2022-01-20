@@ -13,6 +13,11 @@ module.exports = withMDX({
         source: '/inr',
         destination: 'http://posters.innovation-challenge.co/inr', // Matched parameters can be used in the destination
         permanent: true,
+      },
+      {
+        source: '/aud',
+        destination: 'http://posters.innovation-challenge.co/aud', // Matched parameters can be used in the destination
+        permanent: true,
       }
     ]
   },
