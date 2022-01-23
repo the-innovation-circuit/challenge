@@ -142,10 +142,10 @@ export default function Home() {
             <Heading as="h4" sx={{ mb: 1 }}>
               Stage 1: Project Formulation
             </Heading>
-            The first stage of this process is to come up with a problem and a
-            solution (here's a great guide for this). From there you'll need to
-            form a pitch that includes the issue you're solving, your idea, the
-            impact of your idea and your idea's feasibility.
+            The first stage of the process is to come up with a problem and a
+            solution. From there you'll need to form a pitch that includes the 
+            issue you're solving, your idea, the impact of your idea and your idea's 
+            feasibility.
           </Card>
           <Card sx={{ p: [3, 3, 3] }}>
             <Heading as="h4" sx={{ mb: 1 }}>
@@ -153,7 +153,7 @@ export default function Home() {
             </Heading>
             In this stage, all teams who wish to participate will submit a video
             (max. 5 minutes) with their pitch as a video in the form below by
-            March 21st.
+            March 31st.
           </Card>
           <Card sx={{ p: [3, 3, 3] }}>
             <Heading as="h4" sx={{ mb: 1 }}>
