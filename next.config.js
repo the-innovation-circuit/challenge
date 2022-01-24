@@ -18,6 +18,11 @@ module.exports = withMDX({
         source: '/aud',
         destination: 'http://posters.innovation-challenge.co/aud', // Matched parameters can be used in the destination
         permanent: true,
+      },
+      {
+        source: '/krw',
+        destination: 'http://posters.innovation-challenge.co/krw', // Matched parameters can be used in the destination
+        permanent: true,
       }
     ]
   },
