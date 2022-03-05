@@ -383,6 +383,21 @@ export default function Home() {
                 }}
               />
             </Link>
+            <Link href="https://stickermule.com" target="_blank">
+              <Image
+                src="https://cdn.worldvectorlogo.com/logos/sticker-mule.svg"
+                sx={{
+                  background: 'white',
+                  p: 3,
+                  borderRadius: 8,
+                  height: '80px',
+                  mx: 1,
+                  mb: 2,
+                  border: '0.1px solid',
+                  borderColor: 'sunken'
+                }}
+              />
+            </Link>
           </Flex>
         </Container>
       </Box>
