@@ -383,6 +383,21 @@ export default function Home() {
                 }}
               />
             </Link>
+            <Link href="https://www.midasacademy.com.sg" target="_blank">
+              <Image
+                src="https://www.midasacademy.com.sg/wp-content/uploads/2021/11/midas.png"
+                sx={{
+                  background: 'white',
+                  p: 3,
+                  borderRadius: 8,
+                  height: '80px',
+                  mx: 1,
+                  mb: 2,
+                  border: '0.1px solid',
+                  borderColor: 'sunken'
+                }}
+              />
+            </Link>
           </Flex>
         </Container>
       </Box>
