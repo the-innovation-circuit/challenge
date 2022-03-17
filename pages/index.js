@@ -124,7 +124,7 @@ export default function Home() {
               }}
             >
               <SquareButton>
-                Join the Challenge (closes 31st March)
+                Join the Challenge (closes 4th April)
               </SquareButton>
             </Link>
           </Box>
@@ -149,11 +149,11 @@ export default function Home() {
           </Card>
           <Card sx={{ p: [3, 3, 3] }}>
             <Heading as="h4" sx={{ mb: 1 }}>
-              Stage 2: The Qualifying Round (up until 31st March)
+              Stage 2: The Qualifying Round (up until 4th April)
             </Heading>
             In this stage, all teams who wish to participate will submit a video
             (max. 5 minutes) with their pitch as a video in the form below by
-            March 31st.
+            April 4th.
           </Card>
           <Card sx={{ p: [3, 3, 3] }}>
             <Heading as="h4" sx={{ mb: 1 }}>
@@ -386,6 +386,21 @@ export default function Home() {
             <Link href="https://www.midasacademy.com.sg" target="_blank">
               <Image
                 src="https://www.midasacademy.com.sg/wp-content/uploads/2021/11/midas.png"
+                sx={{
+                  background: 'white',
+                  p: 3,
+                  borderRadius: 8,
+                  height: '80px',
+                  mx: 1,
+                  mb: 2,
+                  border: '0.1px solid',
+                  borderColor: 'sunken'
+                }}
+              />
+            </Link>
+            <Link href="https://stickermule.com" target="_blank">
+              <Image
+                src="https://cdn.worldvectorlogo.com/logos/sticker-mule.svg"
                 sx={{
                   background: 'white',
                   p: 3,
