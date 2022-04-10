@@ -151,9 +151,9 @@ export default function Home() {
         ))}
       </Container>
       <Box sx={{ py: 4, bg: 'primary', color: 'white' }}>
-        <Container variant="copy">
-          <Heading mt={0} as="h2">
-            Thank you to our sponsors & partners for their kind support who made
+        <Container>
+          <Heading mt={1} as="h2" sx={{maxWidth: '600px', mb: 2}}>
+            Thank you to our sponsors & partners for their kind support in making
             the Innovation Challenge possible.
           </Heading>
           <Flex mt={3} sx={{ flexWrap: 'wrap' }}>
