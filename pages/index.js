@@ -14,8 +14,6 @@ import {
 } from 'theme-ui'
 import Meta from '@the-innovation-circuit/meta'
 import Script from 'next/script'
-import times from 'lodash/times'
-import Marquee from 'react-marquee-slider'
 
 function SquareButton({
   children,
@@ -54,27 +52,38 @@ function GalleryImage({ src, ml, mr }) {
   )
 }
 
-function Avatar({ image, name, role }) {
-  return (
-    <Flex sx={{ alignItems: 'center' }}>
-      <img
-        src={image}
-        style={{
-          height: '60px',
-          width: '60px',
-          objectFit: 'cover',
-          objectPosition: 'center',
-          borderRadius: '12px',
-          marginRight: '8px'
-        }}
-      />{' '}
-      <Box>
-        <Heading as="h3">{name}</Heading>
-        {role}
-      </Box>
-    </Flex>
-  )
-}
+const finalists = [
+  {
+    name: 'Zarabica',
+    description:
+      'A coffee business dedicated to providing marginalised Filipino youth with the opportunities to develop sustainable art literacy skills. Created by Piper Yu in the Philippines.',
+    youtube: 'https://www.youtube.com/embed/NA2u-BaRXp8'
+  },
+  {
+    name: 'Political Creators',
+    description:
+      'An initiative to engage and educate young people about politics and current affairs through content. Created by Kayleigh Low & Noelle Ng in Singapore.',
+    youtube: 'https://www.youtube.com/embed/5gG3CzIgI7g'
+  },
+  {
+    name: 'Weblang 2.0',
+    description:
+      'A platform to provide an enriching culturally relevant language learning experience. Created by Hanqi Xiao, Shravan Gooty, Zian Chen, Nicholas Copland & Audrey Biller in the United States of America.',
+    youtube: 'https://www.youtube.com/embed/rc4RGm8fmnE'
+  },
+  {
+    name: 'Feed',
+    description:
+      'A project that reduces food waste by streamlining the supply chain through seamless food transactions and intuitive food planning. Created by Jamie Emilie Alabin, Jove Calalo, Javier Luis Barreiro & Dani Peralta in the Philippines. ',
+    youtube: 'https://www.youtube.com/embed/5e96CQF6kgc'
+  },
+  {
+    name: 'Mrembo',
+    description:
+      'A sustainable makeup line that caters to a wide range of skin tones. Created by Nandini Nair, Priscilla Silfanus & Sanjana Vedula in Singapore.',
+    youtube: 'https://www.youtube.com/embed/wCzOgW81yHw'
+  }
+]
 
 const description = `Calling all students aged 12 to 19 in APAC! The Innovation Challenge is your chance to tackle the critical issues that your community faces. As an individual or as a team (5 people at most) you'll identify a issue, create an idea to solve that issue and then pitch your idea. The best pitch will win a SGD 1,000 cash prize to help kickstart the team's idea.`
 
@@ -85,9 +94,7 @@ export default function Home() {
         title="The Innovation Challenge"
         description={description}
         image="https://cloud-ck3svo7u2-hack-club-bot.vercel.app/0untitled_design-24.png"
-      >
-        <script src="https://embed.small.chat/TKM55CBL5C02UQJDS0MA.js" />
-      </Meta>
+      />
       <Script
         data-website-id="a1f88f64-44d5-4e26-8472-248fc8a8c7c9"
         src="https://analytics.sampoder.com/umami.js"
@@ -108,235 +115,46 @@ export default function Home() {
             display: 'grid',
             flexDirection: 'column',
             gap: '8px',
-            py: 6
+            py: 5
           }}
         >
           <Heading sx={{ fontSize: [3, 4], fontWeight: 600 }}>
-            Pitch your innovative idea & potentially win $1,000 at the
+            Congratulations to the finalists of the
           </Heading>
           <Heading sx={{ fontSize: [6, 7] }}>Innovation Challenge</Heading>
-          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Link
-              href="#submit"
-              sx={{
-                textDecoration: 'none!important',
-                fontSize: ['0.8em', '1em']
-              }}
-            >
-              <SquareButton>
-                Join the Challenge (closes 4th April)
-              </SquareButton>
-            </Link>
-          </Box>
         </Container>
       </Box>
-      <Container variant="copy" sx={{ fontSize: 2, py: 4 }}>
-        {description}
+      <Container
+        sx={{
+          fontSize: 2,
+          py: 4,
+          display: 'grid',
+          gridTemplateColumns: ['1fr', '1fr', '1fr 1fr 1fr'],
+          gap: '16px'
+        }}
+      >
+        {finalists.map(finalist => (
+          <Card>
+            <iframe
+              src={finalist.youtube}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style={{borderRadius: '8px'}}
+            ></iframe>
+            <Heading as="h3" my={3}>
+              {finalist.name}
+            </Heading>
+            <Box>{finalist.description}</Box>
+          </Card>
+        ))}
       </Container>
-      <Box sx={{ bg: 'primary', py: 4 }}>
-        <Container variant="copy" sx={{ display: 'grid', gap: '16px' }}>
-          <Heading as="h1" sx={{ color: 'white' }}>
-            The Process
-          </Heading>
-          <Card sx={{ p: [3, 3, 3] }}>
-            <Heading as="h4" sx={{ mb: 1 }}>
-              Stage 1: Project Formulation
-            </Heading>
-            The first stage of the process is to come up with a problem and a
-            solution. From there you'll need to form a pitch that includes the 
-            issue you're solving, your idea, the impact of your idea and your idea's 
-            feasibility.
-          </Card>
-          <Card sx={{ p: [3, 3, 3] }}>
-            <Heading as="h4" sx={{ mb: 1 }}>
-              Stage 2: The Qualifying Round (up until 4th April)
-            </Heading>
-            In this stage, all teams who wish to participate will submit a video
-            (max. 5 minutes) with their pitch as a video in the form below by
-            April 4th.
-          </Card>
-          <Card sx={{ p: [3, 3, 3] }}>
-            <Heading as="h4" sx={{ mb: 1 }}>
-              Stage 3: The Finals (April 30th)
-            </Heading>
-            The top five teams from the Qualifying Round will be invited to take
-            place in the finals by April 4th. In the finals they'll deliver a
-            5-10 minute pitch live in front of a panel of judges and then answer
-            questions for another 5 minutes. The winning team will subsequently
-            be selected. The finals will take place on Saturday April 30th, finalists
-            will receive all the details.
-          </Card>
-          <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-            <Card
-              sx={{
-                p: [3, 3, 3],
-                py: [2, 2, 2],
-                mr: 2,
-                mb: 2,
-                width: 'fit-content',
-                fontWeight: 700
-              }}
-              variant="interactive"
-              as="a"
-              href="https://docs.google.com/document/d/1XHwdeZ_WaeGHft7E1FETgkWHjWU2FEYA9IuivaiaP_w/edit?usp=sharing"
-              target="_blank"
-            >
-              Learn More →
-            </Card>
-            <Card
-              sx={{
-                p: [3, 3, 3],
-                py: [2, 2, 2],
-                width: 'fit-content',
-                mb: 2,
-                fontWeight: 700
-              }}
-              variant="interactive"
-              as="a"
-              href="https://discord.com/invite/6B7PF6EuV3"
-              target="_blank"
-            >
-              Join Our Discord →
-            </Card>
-          </Box>
-        </Container>
-      </Box>
-      <Box sx={{ py: 4 }}>
-        <Marquee velocity={25}>
-          <GalleryImage
-            ml={4}
-            mr={0}
-            src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/0gems_innovation_week-2763-min.jpg"
-          />
-          <GalleryImage
-            ml={4}
-            mr={0}
-            src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/1gems_innovation_week-2831-min.jpg"
-          />
-          <GalleryImage
-            ml={4}
-            mr={0}
-            src="https://cloud-okol6b1vm-hack-club-bot.vercel.app/2gems_innovation_week-2754-min.jpg"
-          />
-          <GalleryImage
-            ml={4}
-            mr={0}
-            src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/0screenshot_2021-04-05_at_7.25.05_pm.png"
-          />
-        </Marquee>
-        <br />
-        <Marquee velocity={25}>
-          <GalleryImage
-            mr={4}
-            ml={0}
-            src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/1screenshot_2021-04-05_at_7.24.29_pm.png"
-          />
-          <GalleryImage
-            mr={4}
-            ml={0}
-            src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/2screenshot_2021-04-05_at_7.23.57_pm.png"
-          />
-          <GalleryImage
-            mr={4}
-            ml={0}
-            src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/3screenshot_2021-04-05_at_7.23.42_pm.png"
-          />
-          <GalleryImage
-            mr={4}
-            ml={0}
-            src="https://cloud-qmweg7d8y-hack-club-bot.vercel.app/4screenshot_2021-04-05_at_7.23.14_pm.png"
-          />
-        </Marquee>
-      </Box>
-      <Box bg="primary" sx={{ py: 4 }}>
-        <Container variant="copy" sx={{ display: 'grid', gap: '16px' }}>
-          <Heading as="h1" color="white">
-            The Prizes
-          </Heading>
-          <Card
-            sx={{
-              p: [3, 3, 3],
-              bg: 'sheet',
-              boxShadow: 'none',
-              border: '0.1px solid',
-              borderColor: 'sunken'
-            }}
-          >
-            <Heading as="h4" sx={{ mb: 1 }}>
-              The Grand Prize: $1,000
-            </Heading>
-            The Grand Prize is judged on innovation, impact, presentation and
-            feasibility. This prize, alongside the others below, will be
-            presented after the finals.
-          </Card>
-          <Card
-            sx={{
-              p: [3, 3, 3],
-              bg: 'sheet',
-              boxShadow: 'none',
-              border: '0.1px solid',
-              borderColor: 'sunken'
-            }}
-          >
-            <Heading as="h4" sx={{ mb: 1 }}>
-              The Ezsy Prize: $250
-            </Heading>
-            Inspired by our sponsor{' '}
-            <Link href="https://ezsy.com/" target="_blank">
-              Ezsy
-            </Link>
-            , this prize will go to the team / individual whose idea is the best
-            at making people’s lives <i>ezsy-ier</i>.
-          </Card>
-          <Card
-            sx={{
-              p: [3, 3, 3],
-              bg: 'sheet',
-              boxShadow: 'none',
-              border: '0.1px solid',
-              borderColor: 'sunken'
-            }}
-          >
-            <Heading as="h4" sx={{ mb: 1 }}>
-              The Best Presented Prize:
-              $250 (sponsored by the ASEAN Fintech Group)
-            </Heading>
-            This prize will go to the team / individual who displays the best
-            presentation skills in their pitch at the finals. This prize has
-            been sponsored by{' '}
-            <Link href="https://www.aseanfintechgroup.com" target="_blank">
-              the ASEAN Fintech Group
-            </Link>
-            .
-          </Card>
-        </Container>
-      </Box>
-      <Box sx={{ py: 4 }}>
+      <Box sx={{ py: 4, bg: 'primary', color: 'white' }}>
         <Container variant="copy">
-          <Heading as="h1">Who Is Behind The Challenge?</Heading>
-          <Grid sx={{ columns: [1, 3], gap: 4, mt: 3 }} columns={[2, 3]}>
-            <Avatar
-              name="Arsh Shrivastava"
-              image="/arsh.png"
-              role="Organiser"
-            />
-            <Avatar
-              name={
-                <>
-                  Diego <br /> Paniagua Silva
-                </>
-              }
-              image="/diego.png"
-              role="Organiser"
-            />
-            <Avatar name="Edwin Cheah" image="/edwin.png" role="Organiser" />
-            <Avatar name="Neil Ghosh" image="/neil.png" role="Organiser" />
-            <Avatar name="Sam Poder" image="/sam.png" role="Organiser" />
-            <Avatar name="Belinda Lim" image="https://media-exp1.licdn.com/dms/image/C5103AQGAU-uuptxtAA/profile-displayphoto-shrink_400_400/0/1552823390305?e=1648080000&v=beta&t=HMrzYidxJtAVFPBz5dvejEoqt1bxidYj-dmfiYgrcSk" role="Judge ~ Avarta" />
-            <Avatar name="Lysan Chew" image="/1643760776999.jpeg" role="Judge ~ Amorepacific" />
-          </Grid>
-          <Heading mt={4} as="h3">
-            With the kind support of our sponsors & partners...
+          <Heading mt={0} as="h2">
+            Thank you to our sponsors & partners for their kind support who made
+            the Innovation Challenge possible.
           </Heading>
           <Flex mt={3} sx={{ flexWrap: 'wrap' }}>
             <Link href="https://www.aseanfintechgroup.com" target="_blank">
@@ -413,71 +231,22 @@ export default function Home() {
                 }}
               />
             </Link>
+            <Link href="https://hackclub.com" target="_blank">
+              <Image
+                src="https://assets.hackclub.com/flag-standalone.png"
+                sx={{
+                  background: 'white',
+                  borderRadius: 8,
+                  height: '80px',
+                  mx: 1,
+                  mb: 2,
+                  border: '0.1px solid',
+                  borderColor: 'sunken',
+                  p: 3
+                }}
+              />
+            </Link>
           </Flex>
-        </Container>
-      </Box>
-      <Box bg="primary">
-        <Container
-          id="submit"
-          variant="copy"
-          as="form"
-          method="POST"
-          action="https://airtable-forms-proxy.innovationcircuit.co/api/appfav1jhxXDItkOL/Registrations?redirect=https://innovation-challenge.co/welcome"
-          sx={{
-            fontSize: 2,
-            py: 4,
-            display: 'grid',
-            gap: '16px',
-            color: 'white'
-          }}
-        >
-          <Heading>Join The Challenge</Heading>
-          <Box sx={{}}>
-            <small>Team Name</small>
-            <Input
-              name="Team Name"
-              bg="sheet"
-              required
-              sx={{
-                border: '0.1px solid',
-                borderColor: 'sunken',
-                boxShadow: 'card'
-              }}
-            />
-          </Box>
-          <Box sx={{}}>
-            <small>Your Name</small>
-            <Input
-              name="Name"
-              bg="sheet"
-              required
-              sx={{
-                border: '0.1px solid',
-                borderColor: 'sunken',
-                boxShadow: 'card'
-              }}
-            />
-          </Box>
-          <Box>
-            <small>Contact Email (we'll send all the details here)</small>
-            <Input
-              bg="sheet"
-              name="Email"
-              required
-              sx={{
-                border: '0.1px solid',
-                borderColor: 'sunken',
-                boxShadow: 'card'
-              }}
-            />
-          </Box>
-          <SquareButton
-            as="h5"
-            mx={0}
-            sx={{ justifyContent: 'left', py: '12px', width: 'fit-content' }}
-          >
-            Join 🚀
-          </SquareButton>
         </Container>
       </Box>
       <Box bg="snow">
