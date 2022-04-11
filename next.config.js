@@ -10,6 +10,11 @@ module.exports = withMDX({
   async redirects() {
     return [
       {
+        source: '/finals',
+        destination: 'https://www.youtube.com/watch?v=P3fMUDwCzi0', // Matched parameters can be used in the destination
+        permanent: false,
+      },
+      {
         source: '/inr',
         destination: 'http://posters.innovation-challenge.co/inr', // Matched parameters can be used in the destination
         permanent: true,
