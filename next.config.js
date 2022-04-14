@@ -11,7 +11,7 @@ module.exports = withMDX({
     return [
       {
         source: '/finals',
-        destination: 'https://www.youtube.com/watch?v=P3fMUDwCzi0', // Matched parameters can be used in the destination
+        destination: 'https://www.youtube.com/watch?v=qG6guY4eb2k', // Matched parameters can be used in the destination
         permanent: false,
       },
       {
