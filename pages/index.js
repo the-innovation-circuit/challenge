@@ -10,6 +10,7 @@ import {
   Textarea,
   Image,
   Flex,
+  Divider,
   Text
 } from 'theme-ui'
 import Meta from '@the-innovation-circuit/meta'
@@ -152,7 +153,8 @@ export default function Home() {
             <Heading as="h3" mt={3} sx={{color: '#CD7F32'}}>
               {finalist.name}
             </Heading>
-            <Box my={2}>{finalist.prize}</Box>
+            <Box my={2} sx={{color: '#CD7F32'}}>{finalist.prize}</Box>
+            <Divider />
             <Box>{finalist.description}</Box>
           </Card>
         ))}
