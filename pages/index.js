@@ -52,7 +52,7 @@ function GalleryImage({ src, ml, mr }) {
   )
 }
 
-const finalists = [
+const winners = [
   {
     name: 'Zarabica',
     description:
@@ -70,7 +70,10 @@ const finalists = [
     description:
       'A platform to provide an enriching culturally relevant language learning experience. Created by Hanqi Xiao, Shravan Gooty, Zian Chen, Nicholas Copland & Audrey Biller in the United States of America.',
     youtube: 'https://www.youtube.com/embed/rc4RGm8fmnE'
-  },
+  }
+]
+
+const finalists = [
   {
     name: 'Feed',
     description:
@@ -119,7 +122,7 @@ export default function Home() {
           }}
         >
           <Heading sx={{ fontSize: [3, 4], fontWeight: 600 }}>
-            Congratulations to the finalists of the
+            Congratulations to the finalists and winners of the
           </Heading>
           <Heading sx={{ fontSize: [6, 7] }}>Innovation Challenge</Heading>
         </Container>
@@ -133,6 +136,22 @@ export default function Home() {
           gap: '16px'
         }}
       >
+        {winners.map(finalist => (
+          <Card>
+            <iframe
+              src={finalist.youtube}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style={{borderRadius: '8px'}}
+            ></iframe>
+            <Heading as="h3" mt={3} mb={2} sx={{color: '#CD7F32'}}>
+              {finalist.name}
+            </Heading>
+            <Box>{finalist.description}</Box>
+          </Card>
+        ))}
         {finalists.map(finalist => (
           <Card>
             <iframe
@@ -143,7 +162,7 @@ export default function Home() {
               allowfullscreen
               style={{borderRadius: '8px'}}
             ></iframe>
-            <Heading as="h3" my={3}>
+            <Heading as="h3" mt={3} mb={2}>
               {finalist.name}
             </Heading>
             <Box>{finalist.description}</Box>
