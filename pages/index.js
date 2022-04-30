@@ -57,19 +57,22 @@ const winners = [
     name: 'Zarabica',
     description:
       'A coffee business dedicated to providing marginalised Filipino youth with the opportunities to develop sustainable art literacy skills. Created by Piper Yu in the Philippines.',
-    youtube: 'https://www.youtube.com/embed/NA2u-BaRXp8'
-  },
-  {
-    name: 'Political Creators',
-    description:
-      'An initiative to engage and educate young people about politics and current affairs through content. Created by Kayleigh Low & Noelle Ng in Singapore.',
-    youtube: 'https://www.youtube.com/embed/5gG3CzIgI7g'
+    youtube: 'https://www.youtube.com/embed/NA2u-BaRXp8',
+    prize: 'Grand Prize Winner'
   },
   {
     name: 'Weblang 2.0',
     description:
       'A platform to provide an enriching culturally relevant language learning experience. Created by Hanqi Xiao, Shravan Gooty, Zian Chen, Nicholas Copland & Audrey Biller in the United States of America.',
-    youtube: 'https://www.youtube.com/embed/rc4RGm8fmnE'
+    youtube: 'https://www.youtube.com/embed/rc4RGm8fmnE',
+    prize: 'Best Presented Prize Winner'
+  },
+  {
+    name: 'Political Creators',
+    description:
+      'An initiative to engage and educate young people about politics and current affairs through content. Created by Kayleigh Low & Noelle Ng in Singapore.',
+    youtube: 'https://www.youtube.com/embed/5gG3CzIgI7g',
+    prize: 'The Ezsy Prize Winner'
   }
 ]
 
@@ -146,9 +149,10 @@ export default function Home() {
               allowfullscreen
               style={{borderRadius: '8px'}}
             ></iframe>
-            <Heading as="h3" mt={3} mb={2} sx={{color: '#CD7F32'}}>
+            <Heading as="h3" mt={3} sx={{color: '#CD7F32'}}>
               {finalist.name}
             </Heading>
+            <Box my={2}>{finalist.prize}</Box>
             <Box>{finalist.description}</Box>
           </Card>
         ))}
